@@ -1,0 +1,64 @@
+.header {
+  border-bottom: 1px solid #ececec;
+
+  & > .container {
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
+
+nav {
+  flex-grow: 1;
+}
+
+.nav {
+  display: flex;
+  gap: 46px;
+
+  &__link {
+    color: map-get($colors, 'primary');
+    @include font(14px, 500, 1.1, 0.02em);
+    text-decoration: none;
+
+    &--active {
+      position: relative;
+      color: map-get($colors, 'link');
+    }
+
+    &--active::after {
+      position: absolute;
+      content: '';
+      bottom: -32px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: currentColor;
+      border-radius: 2px;
+    }
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: map-get($colors, 'link');
+    transition: color 250ms $transitionTimingFunction;
+  }
+}
+
+.contact {
+  display: flex;
+  gap: 30px;
+
+  &__link {
+    @extend .nav__link;
+    display: flex;
+    align-items: center;
+    color: map-get($colors, 'contact');
+  }
+
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}

@@ -1,0 +1,40 @@
+.footer {
+  background-color: map-get($colors, 'background');
+  padding: 60px 0;
+
+  & > .container {
+    display: flex;
+  }
+}
+
+.address {
+  margin-right: 70px;
+
+  & > :nth-child(2) {
+    margin-top: 20px;
+  }
+
+  &__content {
+    font-style: normal;
+    @include font(14px, 400, 1.71, 0.03em);
+
+    &:not(:first-child) {
+      margin-top: 9px;
+    }
+
+    &:first-child {
+      color: map-get($colors, 'light');
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: map-get($colors, 'footerContact');
+
+    &:hover,
+    &:focus {
+      background-color: map-get($colors, 'link');
+      transition: background-color 250ms $transitionTimingFunction;
+    }
+  }
+}

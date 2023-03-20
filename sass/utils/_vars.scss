@@ -1,0 +1,26 @@
+$colors: (
+  'light': #fff,
+  'team': #f5f4fa,
+  'dark': #000,
+  'primary': #212121,
+  'link': #2196f3,
+  'contact': #757575,
+  'icons': #afb1b8,
+  'border': #eee,
+  'portfolioBox': rgba(33, 150, 243, 0.9),
+  'boxed': rgba(47, 48, 58, 0.8),
+  'footerContact': rgba(255, 255, 255, 0.6),
+  'background': #2f303a,
+);
+
+$borderRadius: 4px;
+$transitionTimingFunction: cubic-bezier(0.4, 0, 0.2, 1);
+$boxShadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+$boxShadow2: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+@mixin font($size, $weight, $line-height, $spacing) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  letter-spacing: $spacing;
+}

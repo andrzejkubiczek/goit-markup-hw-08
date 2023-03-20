@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: map-get($colors, 'primary');
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+svg {
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 94px 0;
+
+  &__heading {
+    margin-bottom: 50px;
+    @include font(36px, 700, 1.2, 0.03em);
+    text-align: center;
+    color: map-get($colors, 'primary');
+  }
+
+  &:nth-child(3) {
+    background-color: map-get($colors, 'team');
+  }
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  &__item3 {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+
+  &__item4 {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+
+  &__item6 {
+    flex-basis: calc((100% - 150px) / 6);
+  }
+}

@@ -1,0 +1,20 @@
+.newsletter {
+  margin-top: 12px;
+
+  &__form {
+    @extend .submenu__list;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__input {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: $borderRadius;
+    background-color: transparent;
+    outline: none;
+    padding: 15px 16px;
+    min-width: 358px;
+    @include font(16px, 400, 1.25, 0.03em);
+    color: map-get($colors, 'footerContact');
+  }
+}
