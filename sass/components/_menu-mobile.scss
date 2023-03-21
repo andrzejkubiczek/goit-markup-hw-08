@@ -1,0 +1,18 @@
+@media screen and (max-width: $breakpointTablet) {
+  .nav,
+  .contact {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle {
+  outline: none;
+  border: none;
+  background: none;
+}
