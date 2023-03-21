@@ -27,6 +27,7 @@ nav {
 
     &--active::after {
       position: absolute;
+      display: block;
       content: '';
       bottom: -32px;
       left: 0;

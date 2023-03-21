@@ -18,3 +18,11 @@
     text-transform: uppercase;
   }
 }
+
+//PHONE, TABLET
+
+@media screen and (max-width: calc($breakpointDesktop - 1px)) {
+  .work {
+    display: none;
+  }
+}
