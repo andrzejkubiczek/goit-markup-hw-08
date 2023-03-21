@@ -1,0 +1,6 @@
+@media screen and (max-width: calc($breakpointTablet - 1px)) {
+  .nav,
+  .contact {
+    display: none;
+  }
+}

@@ -1,11 +1,10 @@
 .header {
   border-bottom: 1px solid #ececec;
+  padding: 16px 0;
 
   & > .container {
     display: flex;
     align-items: center;
-    padding-top: 24px;
-    padding-bottom: 25px;
   }
 }
 
@@ -15,11 +14,10 @@ nav {
 
 .nav {
   display: flex;
-  gap: 46px;
 
   &__link {
     color: map-get($colors, 'primary');
-    @include font(14px, 500, 1.1, 0.02em);
+    @include font(14px, 500, 1.14, 0.02em);
     text-decoration: none;
 
     &--active {
@@ -60,5 +58,41 @@ nav {
   &__icon {
     margin-right: 10px;
     fill: currentColor;
+  }
+}
+
+//TABLET
+
+@media screen and (min-width: $breakpointTablet) and (max-width: calc($breakpointDesktop - 1px)) {
+  .header {
+    padding: 26px 0;
+  }
+
+  .nav {
+    margin-left: 83px;
+    gap: 60px;
+  }
+
+  .contact {
+    flex-direction: column;
+    gap: 10px;
+
+    &__link {
+      @include font(12px, false, 1.16);
+    }
+  }
+}
+
+//DESKTOP
+
+@media screen and (min-width: $breakpointDesktop) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  .nav {
+    margin-left: 93px;
+    gap: 46px;
   }
 }

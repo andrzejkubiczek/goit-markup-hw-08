@@ -13,15 +13,8 @@
   }
 }
 
-@media screen and (min-width: $breakpointTablet) {
-  .logo {
-    margin-right: 83px;
-  }
-}
-
 @media screen and (min-width: $breakpointDesktop) {
   .logo {
     @include font(26px, false, 1.19);
-    margin-right: 93px;
   }
 }
