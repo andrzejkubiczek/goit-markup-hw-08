@@ -1,15 +1,27 @@
 .logo {
   font-family: 'Raleway', sans-serif;
-  @include font(26px, 700, 1.2, 0.03em);
+  @include font(24px, 700, 1.17, 0.03em);
   color: map-get($colors, 'dark');
   text-decoration: none;
-  margin-right: 93px;
 
-  &--white {
+  &--color {
     color: map-get($colors, 'light');
   }
 
-  &__blue {
+  &__highlight {
     color: map-get($colors, 'link');
+  }
+}
+
+@media screen and (min-width: $breakpointTablet) {
+  .logo {
+    margin-right: 83px;
+  }
+}
+
+@media screen and (min-width: $breakpointDesktop) {
+  .logo {
+    @include font(26px, false, 1.19);
+    margin-right: 93px;
   }
 }
