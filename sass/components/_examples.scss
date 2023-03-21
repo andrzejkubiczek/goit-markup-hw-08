@@ -1,9 +1,8 @@
 .examples {
-  @include font(14px, 400, 1.1, 0.03em);
+  @include font(14px, 400, 1.14, 0.03em);
 
   &__label {
-    @extend .examples;
-    font-weight: 700;
+    @include font(14px, 700);
     text-transform: uppercase;
     color: map-get($colors, 'primary');
   }
@@ -16,9 +15,16 @@
   }
 
   &__content {
-    @extend .examples;
+    @include font(false, false, 1.71);
     margin: 10px 0 96px;
-    line-height: 1.7;
     color: map-get($colors, 'contact');
+  }
+}
+
+@media screen and (max-width: calc($breakpointTablet - 1px)) {
+  .examples {
+    &__label {
+      text-align: center;
+    }
   }
 }

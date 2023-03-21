@@ -24,7 +24,7 @@ svg {
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
 
   &__heading {
     margin-bottom: 50px;
@@ -53,5 +53,29 @@ svg {
 
   &__item6 {
     flex-basis: calc((100% - 150px) / 6);
+  }
+}
+
+//TABLET
+
+@media screen and (min-width: $breakpointTablet) and (max-width: calc($breakpointDesktop - 1px)) {
+  .grid {
+    &__item4 {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+  }
+}
+
+//DESKTOP
+
+@media screen and (min-width: $breakpointDesktop) {
+  .section {
+    padding: 94px 0;
+  }
+
+  .grid {
+    &__item4 {
+      flex-basis: calc((100% - 90px) / 4);
+    }
   }
 }
