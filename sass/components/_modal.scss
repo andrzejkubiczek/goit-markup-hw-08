@@ -24,8 +24,9 @@
   top: 50%;
   left: 50%;
   padding: 40px;
-  min-width: 528px;
-  min-height: 581px;
+  width: calc(100vw - 30px);
+  max-width: 450px;
+  min-height: 609px;
   visibility: visible;
   background-color: map-get($colors, 'light');
   box-shadow: $boxShadow2;
@@ -38,6 +39,9 @@
     top: 8px;
     right: 8px;
     padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     background-color: map-get($colors, 'light');
@@ -143,12 +147,23 @@
     }
 
     &-text {
-      @include font(14px, 400, 1.5, 0.03em);
+      @include font(12px, 400, 1.1, 0.03em);
       color: map-get($colors, 'contact');
     }
 
     &-link {
       color: map-get($colors, 'link');
     }
+  }
+}
+
+@media screen and (min-width: $breakpointDesktop) {
+  .modal {
+    max-width: 528px;
+    min-height: 581px;
+  }
+
+  .form__checkbox-text {
+    @include font(14px, false, 1.71);
   }
 }
