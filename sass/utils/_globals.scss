@@ -44,10 +44,6 @@ img {
   flex-wrap: wrap;
   gap: 30px;
 
-  &__item3 {
-    flex-basis: calc((100% - 60px) / 3);
-  }
-
   &__item6 {
     flex-basis: calc((100% - 30px) / 2);
   }
@@ -57,6 +53,11 @@ img {
 
 @media screen and (min-width: $breakpointTablet) and (max-width: calc($breakpointDesktop - 1px)) {
   .grid {
+    &__item3 {
+      flex-basis: calc((100% - 30px) / 2);
+      max-width: 354px;
+    }
+
     &__item4 {
       flex-basis: calc((100% - 30px) / 2);
     }
@@ -75,6 +76,10 @@ img {
   }
 
   .grid {
+    &__item3 {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+
     &__item4 {
       flex-basis: calc((100% - 90px) / 4);
     }
