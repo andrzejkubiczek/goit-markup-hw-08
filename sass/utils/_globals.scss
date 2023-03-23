@@ -12,8 +12,7 @@ ul {
   list-style: none;
 }
 
-img,
-svg {
+img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -47,10 +46,6 @@ svg {
 
   &__item3 {
     flex-basis: calc((100% - 60px) / 3);
-  }
-
-  &__item4 {
-    flex-basis: calc((100% - 90px) / 4);
   }
 
   &__item6 {

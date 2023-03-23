@@ -1,30 +1,40 @@
 .examples {
   @include font(14px, 400, 1.14, 0.03em);
 
-  &__label {
-    @include font(14px, 700);
-    text-transform: uppercase;
-    color: map-get($colors, 'primary');
-  }
-
   &__icon {
     background-color: map-get($colors, 'team');
     padding: 25px 100px;
-    margin-bottom: 30px;
     border-radius: $borderRadius;
+    text-align: center;
+  }
+
+  &__title {
+    @include font(14px, 700);
+    text-transform: uppercase;
+    color: map-get($colors, 'primary');
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
   }
 
   &__content {
     @include font(false, false, 1.71);
-    margin: 10px 0 96px;
     color: map-get($colors, 'contact');
   }
 }
 
-@media screen and (max-width: calc($breakpointTablet - 1px)) {
+@media screen and (min-width: $breakpointTablet) and (max-width: calc($breakpointDesktop - 1px)) {
   .examples {
     &__label {
-      text-align: center;
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpointDesktop) {
+  .examples {
+    &__label {
+      text-align: left;
     }
   }
 }
