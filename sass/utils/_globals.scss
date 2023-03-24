@@ -44,6 +44,10 @@ img {
   flex-wrap: wrap;
   gap: 30px;
 
+  &__item4 {
+    flex-basis: calc((100% - 30px) / 1);
+  }
+
   &__item6 {
     flex-basis: calc((100% - 30px) / 2);
   }
@@ -55,7 +59,6 @@ img {
   .grid {
     &__item3 {
       flex-basis: calc((100% - 30px) / 2);
-      max-width: 354px;
     }
 
     &__item4 {
