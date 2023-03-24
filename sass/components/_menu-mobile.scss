@@ -4,3 +4,123 @@
     display: none;
   }
 }
+
+@media screen and (min-width: $breakpointTablet) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle {
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: map-get($colors, 'light');
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  & .menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: map-get($colors, 'light');
+  }
+
+  &__icon {
+    fill: map-get($colors, 'primary');
+    cursor: pointer;
+    transition: fill 250ms $transitionTimingFunction;
+  }
+
+  &__icon:hover {
+    fill: map-get($colors, 'link');
+  }
+
+  &__content {
+    height: 100vh;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-bottom: 36px;
+  }
+
+  &__item {
+    margin-bottom: 36px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    @include font(40px, 500, 1.17, 0.02em);
+    color: map-get($colors, 'primary');
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    color: map-get($colors, 'link');
+    transition: color 250ms $transitionTimingFunction;
+  }
+
+  &__tel {
+    margin-bottom: 32px;
+  }
+
+  &__tel-link {
+    @include font(34px, 500, 1.17, 0.02em);
+    color: map-get($colors, 'link');
+    text-decoration: none;
+  }
+
+  &__mail {
+    margin-bottom: 64px;
+  }
+
+  &__mail-link {
+    @include font(24px, 500, 1.16, 0.02em);
+    color: map-get($colors, 'contact');
+    text-decoration: none;
+  }
+
+  &__social-item {
+    display: inline-block;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+
+  &__social-item:last-child {
+    border: none;
+    margin: none;
+    padding: none;
+  }
+
+  &__social-link {
+    @include font(18px, 500, 1.22, 0.02em);
+    font-weight: 500;
+    font-size: 18px;
+    color: map-get($colors, 'link');
+    text-decoration: none;
+  }
+}
