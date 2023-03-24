@@ -1,6 +1,5 @@
 .social {
-  margin-top: 12px;
-  margin-right: 78px;
+  margin-bottom: 60px;
 
   &__link {
     display: inline-flex;
@@ -29,5 +28,12 @@
       background-color: map-get($colors, 'link');
       transition: background-color 250ms $transitionTimingFunction;
     }
+  }
+}
+
+@media screen and (min-width: $breakpointDesktop) {
+  .social {
+    margin-top: 12px;
+    margin-right: 78px;
   }
 }

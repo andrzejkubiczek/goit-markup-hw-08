@@ -1,10 +1,10 @@
 .newsletter {
-  margin-top: 12px;
-
   &__form {
-    @extend .submenu__list;
-    flex-wrap: wrap;
-    gap: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
   }
 
   &__input {
@@ -13,8 +13,24 @@
     background-color: transparent;
     outline: none;
     padding: 15px 16px;
-    min-width: 358px;
+    width: calc(100vw - 30px);
+    max-width: 450px;
     @include font(16px, 400, 1.25, 0.03em);
     color: map-get($colors, 'footerContact');
+  }
+}
+
+@media screen and (min-width: $breakpointDesktop) {
+  .newsletter {
+    margin-top: 12px;
+
+    &__form {
+      flex-direction: row;
+      gap: 12px;
+    }
+
+    &__input {
+      max-width: 358px;
+    }
   }
 }

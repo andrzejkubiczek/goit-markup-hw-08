@@ -4,25 +4,25 @@
 
   & > .container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 
 .address {
-  margin-right: 70px;
-
-  & > :nth-child(2) {
-    margin-top: 20px;
-  }
+  margin-bottom: 60px;
 
   &__content {
     font-style: normal;
     @include font(14px, 400, 1.71, 0.03em);
 
     &:not(:first-child) {
-      margin-top: 9px;
+      margin-top: 8px;
     }
 
     &:first-child {
+      margin-top: 20px;
       color: map-get($colors, 'light');
     }
   }
@@ -35,6 +35,44 @@
     &:focus {
       background-color: map-get($colors, 'link');
       transition: background-color 250ms $transitionTimingFunction;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpointTablet) {
+  .footer > .container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+//TABLET
+
+@media screen and (min-width: $breakpointTablet) and (max-width: calc($breakpointDesktop - 1px)) {
+  .footer > .container {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+//DESKTOP
+
+@media screen and (min-width: $breakpointDesktop) {
+  .footer > .container {
+    text-align: left;
+  }
+
+  .address {
+    margin-right: 70px;
+    margin-bottom: 0;
+
+    & > :nth-child(2) {
+      margin-top: 20px;
+    }
+
+    &:not(:first-child) {
+      margin-top: 9px;
     }
   }
 }
