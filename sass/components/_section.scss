@@ -1,0 +1,22 @@
+.section {
+  padding: 60px 0;
+
+  &__heading {
+    margin-bottom: 50px;
+    @include font(36px, 700, 1.2, 0.03em);
+    text-align: center;
+    color: map-get($colors, 'primary');
+  }
+
+  &:nth-child(3) {
+    background-color: map-get($colors, 'team');
+  }
+}
+
+//DESKTOP
+
+@media screen and (min-width: $breakpointDesktop) {
+  .section {
+    padding: 94px 0;
+  }
+}

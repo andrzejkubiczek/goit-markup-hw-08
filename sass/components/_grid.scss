@@ -1,0 +1,47 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  &__item3,
+  &__item4 {
+    flex-basis: 100%;
+  }
+
+  &__item6 {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+//TABLET
+
+@media screen and (min-width: $breakpointTablet) and (max-width: calc($breakpointDesktop - 1px)) {
+  .grid {
+    &__item3,
+    &__item4 {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+
+    &__item6 {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+  }
+}
+
+//DESKTOP
+
+@media screen and (min-width: $breakpointDesktop) {
+  .grid {
+    &__item3 {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+
+    &__item4 {
+      flex-basis: calc((100% - 90px) / 4);
+    }
+
+    &__item6 {
+      flex-basis: calc((100% - 150px) / 6);
+    }
+  }
+}
